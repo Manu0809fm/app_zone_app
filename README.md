@@ -106,6 +106,12 @@ app_s10/
 │   └── build.gradle.kts              # 📦 Dependencias
 └── README.md                         # 📖 Este archivo
 ```
+![image](https://github.com/user-attachments/assets/9f186614-8288-46c7-9aa9-dab50da3e484)
+![image](https://github.com/user-attachments/assets/d43405d7-6779-47ea-a2c6-12964888db00)
+![image](https://github.com/user-attachments/assets/08cb253b-e48d-422a-bfe5-ce12745a10fa)
+![image](https://github.com/user-attachments/assets/a2a7a2bd-f6ec-4168-9701-30aa706c2ba1)
+![image](https://github.com/user-attachments/assets/f5cec8e2-05d7-4192-a57e-087bee3886de)
+
 
 ## 🎮 Cómo Usar la App
 
