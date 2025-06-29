@@ -1,235 +1,106 @@
-# 🎮 GameVault - Firebase Authentication Android
+# 🎮 App S10 - Registro de Juegos Favoritos
 
-Una aplicación Android moderna con **Firebase Authentication** y tema gaming completo. Perfecta para aprender autenticación móvil con una interfaz atractiva de videojuegos.
-
-![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)
-![Kotlin](https://img.shields.io/badge/kotlin-%230095D5.svg?style=for-the-badge&logo=kotlin&logoColor=white)
-![Firebase](https://img.shields.io/badge/Firebase-039BE5?style=for-the-badge&logo=Firebase&logoColor=white)
-
-## 📱 Características
-
-### 🔐 **Autenticación Completa**
-- ✅ Login/Registro con email y contraseña
-- ✅ Login anónimo (modo invitado)
-- ✅ Recuperación de contraseña
-- ✅ Verificación de email
-- ✅ Validaciones y manejo de errores
-- ✅ Logout seguro
-
-### 🎨 **Tema Gaming**
-- 🌈 Paleta de colores neón (púrpura, cyan, verde)
-- 🎮 Iconos gaming personalizados
-- 🌙 Modo oscuro con gradientes
-- ✨ Efectos visuales atractivos
-- 🎯 Interfaz completamente en español
-
-### 🏗️ **Arquitectura**
-- 📱 Material Design 3
-- 🏛️ MVVM pattern ready
-- 🔧 Kotlin moderno
-- 🚀 Firebase SDK actualizado
-
-## 🚀 Instalación y Configuración
-
-### 1️⃣ **Fork del Proyecto**
-
-```bash
-# 1. Haz fork de este repositorio en GitHub
-# 2. Clona tu fork
-git clone https://github.com/TU_USUARIO/app_s10.git
-cd app_s10
-```
-
-### 2️⃣ **Configurar Firebase**
-
-#### **Crear Proyecto Firebase:**
-1. Ve a [Firebase Console](https://console.firebase.google.com/)
-2. Haz clic en "Crear un proyecto"
-3. Ingresa el nombre: `GameVault` (o el que prefieras)
-4. Habilita Google Analytics (opcional)
-5. Crea el proyecto
-
-#### **Agregar App Android:**
-1. En la consola de Firebase, haz clic en "Agregar app" → Android
-2. **Nombre del paquete:** `com.example.app_s10`
-3. **Nombre de la app:** `GameVault`
-4. **Certificado SHA-1:** (opcional por ahora)
-5. Descarga el archivo `google-services.json`
-
-#### **Reemplazar archivo de configuración:**
-```bash
-# Reemplaza el archivo placeholder con tu archivo real
-cp ruta/a/tu/google-services.json app/google-services.json
-```
-
-### 3️⃣ **Habilitar Authentication**
-
-1. En Firebase Console, ve a **Authentication**
-2. Haz clic en **Sign-in method**
-3. Habilita estos proveedores:
-   - ✅ **Correo electrónico/contraseña**
-   - ✅ **Anónimo** (opcional, para modo invitado)
-
-### 4️⃣ **Abrir en Android Studio**
-
-```bash
-# Abre Android Studio
-# File → Open → Selecciona la carpeta app_s10
-# Espera a que Gradle sincronice
-```
-
-### 5️⃣ **Ejecutar la App**
-
-1. Conecta tu dispositivo Android o inicia un emulador
-2. Haz clic en **Run** ▶️
-3. ¡La app se instalará y abrirá!
-
-## 📁 Estructura del Proyecto
-
-```
-app_s10/
-├── app/
-│   ├── src/main/
-│   │   ├── java/com/example/app_s10/
-│   │   │   ├── LoginActivity.kt      # 🔐 Pantalla de login
-│   │   │   └── MainActivity.kt       # 🏠 Dashboard principal
-│   │   ├── res/
-│   │   │   ├── layout/
-│   │   │   │   ├── activity_login.xml    # 🎨 UI Login
-│   │   │   │   └── activity_main.xml     # 🎨 UI Dashboard
-│   │   │   ├── values/
-│   │   │   │   ├── colors.xml        # 🌈 Colores gaming
-│   │   │   │   └── strings.xml       # 🇪🇸 Textos en español
-│   │   │   └── drawable/             # 🎮 Iconos y fondos
-│   │   └── AndroidManifest.xml       # ⚙️ Configuración app
-│   ├── google-services.json          # 🔥 Config Firebase
-│   └── build.gradle.kts              # 📦 Dependencias
-└── README.md                         # 📖 Este archivo
-```
-![image](https://github.com/user-attachments/assets/9f186614-8288-46c7-9aa9-dab50da3e484)
-![image](https://github.com/user-attachments/assets/d43405d7-6779-47ea-a2c6-12964888db00)
-![image](https://github.com/user-attachments/assets/08cb253b-e48d-422a-bfe5-ce12745a10fa)
-![image](https://github.com/user-attachments/assets/a2a7a2bd-f6ec-4168-9701-30aa706c2ba1)
-![image](https://github.com/user-attachments/assets/f5cec8e2-05d7-4192-a57e-087bee3886de)
-
-
-## 🎮 Cómo Usar la App
-
-### **1. Primera Vez**
-- Abre la app
-- Verás la pantalla de login con tema gaming
-- Haz clic en "REGISTRARSE" para crear una cuenta
-
-### **2. Registro**
-- Ingresa tu email y contraseña (mín. 6 caracteres)
-- Haz clic en "REGISTRARSE"
-- Se enviará un email de verificación (opcional)
-
-### **3. Login**
-- Ingresa tus credenciales
-- Haz clic en "INICIAR SESIÓN"
-- Accederás al dashboard gaming
-
-### **4. Modo Invitado**
-- Haz clic en "Continuar como invitado"
-- Acceso instantáneo sin registro
-
-### **5. Dashboard**
-- Ve tu información de usuario
-- Explora las secciones gaming
-- Cierra sesión cuando quieras
-
-## 🛠️ Personalización
-
-### **Cambiar Colores**
-Edita `app/src/main/res/values/colors.xml`:
-```xml
-<color name="gaming_purple">#TU_COLOR</color>
-<color name="gaming_cyan">#TU_COLOR</color>
-```
-
-### **Cambiar Textos**
-Edita `app/src/main/res/values/strings.xml`:
-```xml
-<string name="app_name">Tu App Name</string>
-<string name="login_title">Tu Título</string>
-```
-
-### **Agregar Funcionalidades**
-- Edita `MainActivity.kt` para agregar más features
-- Crea nuevas Activities para pantallas adicionales
-- Integra Firestore para guardar datos de usuario
-
-## 🔧 Tecnologías Utilizadas
-
-| Tecnología | Versión | Propósito |
-|------------|---------|-----------|
-| **Kotlin** | 2.0.21 | Lenguaje principal |
-| **Android Gradle Plugin** | 8.9.2 | Build system |
-| **Firebase BOM** | 33.7.0 | Gestión de versiones Firebase |
-| **Firebase Auth** | Latest | Autenticación |
-| **Material Design** | 1.12.0 | Componentes UI |
-| **ConstraintLayout** | 2.2.1 | Layouts responsive |
-
-## 🚨 Solución de Problemas
-
-### **Error: "google-services.json not found"**
-```bash
-# Asegúrate de que el archivo esté en la ubicación correcta
-ls app/google-services.json
-# Si no existe, descárgalo desde Firebase Console
-```
-
-### **Error: "Default FirebaseApp is not initialized"**
-- Verifica que `google-services.json` sea válido
-- Asegúrate de que el package name coincida: `com.example.app_s10`
-- Limpia y reconstruye el proyecto: Build → Clean Project
-
-### **Error de autenticación**
-- Verifica que Email/Password esté habilitado en Firebase Console
-- Revisa la conexión a internet
-- Verifica las reglas de seguridad de Firebase
-
-### **Problemas de compilación**
-```bash
-# Limpia el proyecto
-./gradlew clean
-
-# Reconstruye
-./gradlew build
-```
-
-## 🤝 Contribuir
-
-1. **Fork** este repositorio
-2. **Crea** una rama para tu feature: `git checkout -b mi-nueva-feature`
-3. **Commit** tus cambios: `git commit -am 'Agregar nueva feature'`
-4. **Push** a la rama: `git push origin mi-nueva-feature`
-5. **Crea** un Pull Request
-
-## 📄 Licencia
-
-Este proyecto está bajo la Licencia MIT. Ve el archivo [LICENSE](LICENSE) para más detalles.
-
-## 👨‍💻 Autor
-
-**GxJohan**
-- GitHub: [@GxJohan](https://github.com/GxJohan)
-- Proyecto: [app_zone_app](https://github.com/GxJohan/app_zone_app)
-
-## 🌟 ¿Te gustó el proyecto?
-
-¡Dale una ⭐ al repositorio si te sirvió! Ayuda a otros developers a encontrarlo.
-
-## 📚 Recursos Adicionales
-
-- [📖 Documentación Firebase Auth](https://firebase.google.com/docs/auth/android/start)
-- [🎨 Material Design Guidelines](https://material.io/design)
-- [📱 Android Developer Guide](https://developer.android.com/guide)
-- [🔥 Firebase Console](https://console.firebase.google.com/)
+Una aplicación Android desarrollada en **Kotlin** que permite a los usuarios registrar, editar, eliminar y buscar sus juegos favoritos. Utiliza **Firebase Authentication** para el login y **Firebase Realtime Database** para almacenar la información de cada usuario de forma segura y privada.
 
 ---
 
-### 🎮 **¡Happy Gaming & Coding!** 🎮
+## 🛠️ Funcionalidades
 
-> Desarrollado con ❤️ para la comunidad de developers Android
+✅ Autenticación de usuarios (login/logout)
+
+✅ Registrar nuevos juegos con:
+
+- Título  
+- Género  
+- Plataforma  
+- Descripción  
+- Año de lanzamiento  
+- Calificación  
+- Estado (completado o no)
+
+✅ Ver la lista de juegos registrados
+
+✅ Editar y eliminar juegos existentes
+
+✅ Filtrar juegos por género
+
+✅ Buscar juegos por título
+
+✅ Datos sincronizados en tiempo real con Firebase
+
+✅ Cada usuario solo ve sus propios juegos (seguridad garantizada)
+
+---
+
+## 🔧 Tecnologías Usadas
+
+- **Kotlin** + Android SDK  
+- **Firebase Realtime Database**  
+- **Firebase Authentication**  
+- **RecyclerView + Adapter**  
+- **Material Design UI**  
+- **ConstraintLayout y ScrollView**  
+
+---
+
+## 📸 Capturas de pantalla
+
+![image](https://github.com/user-attachments/assets/f57c9348-873a-4e73-9b6f-23e108e63713)
+![image](https://github.com/user-attachments/assets/7f64f317-b041-44ba-8d88-9f226bf908f5)
+![image](https://github.com/user-attachments/assets/6473c733-a741-4bfa-815f-b88f690aa686)
+![image](https://github.com/user-attachments/assets/b277ff11-22da-4d52-bea7-4558495e2b93)
+![image](https://github.com/user-attachments/assets/18fe5783-aeae-4638-883c-cf615ddaade3)
+
+
+---
+
+## 🔐 Configuración de Firebase
+
+1. Crea un proyecto en [Firebase Console](https://console.firebase.google.com/)
+2. Agrega tu app Android (usa el paquete `com.example.app_s10`)
+3. Descarga el archivo `google-services.json` y colócalo en: app/ > google-services.json
+4. Habilita **Authentication** > "Correo y contraseña"
+5. En **Realtime Database** > pestaña **Reglas**, coloca lo siguiente:
+
+```json
+{
+"rules": {
+ "games": {
+   "$uid": {
+     ".read": "$uid === auth.uid",
+     ".write": "$uid === auth.uid"
+   }
+ }
+}
+}
+📁 Estructura del Proyecto
+com.example.app_s10/
+├── MainActivity.kt
+├── LoginActivity.kt
+├── AddGameActivity.kt
+├── EditGameActivity.kt
+├── GamesListActivity.kt
+├── GameAdapter.kt
+├── Game.kt
+└── res/
+    ├── layout/
+    │   ├── activity_main.xml
+    │   ├── activity_login.xml
+    │   ├── activity_add_game.xml
+    │   ├── activity_edit_game.xml
+    │   ├── activity_games_list.xml
+    │   └── item_game.xml
+    └── values/
+        ├── strings.xml
+        └── colors.xml
+🚀 Cómo Ejecutar
+Abre el proyecto en Android Studio
+
+Asegúrate de tener el google-services.json en la carpeta app/
+
+Conecta un dispositivo o inicia un emulador
+
+Haz clic en Run ▶️
+
+📝 Licencia
+Este proyecto es de libre uso para fines educativos.
