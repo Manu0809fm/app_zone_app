@@ -104,3 +104,5 @@ Haz clic en Run ▶️
 
 📝 Licencia
 Este proyecto es de libre uso para fines educativos.
+🙌 Créditos
+Desarrollado por: Manuel Flores
